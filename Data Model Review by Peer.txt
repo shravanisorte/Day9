@@ -1,0 +1,27 @@
+Data Model Review by Peer
+
+Step 1: Peer Review  
+The initial version of the star schema was shared for peer feedback.  
+Reviewer: Varsha  
+
+Feedback:  
+• The overall structure looked strong, and the use of surrogate keys was appropriate.  
+• I suggested clearly defining the grain for each fact table to avoid confusion down the line.  
+• We also discussed the importance of keeping naming consistent across all tables — a small detail that makes a big difference.  
+• One important note was ensuring that SCD Type 2 was applied consistently in dimensions like DimCustomer, especially since customer attributes can change over time.
+
+Step 2: Model Refinement  
+The team took the feedback seriously and made the following improvements:  
+• She defined the grain explicitly for each fact table (for example, “one row per sales transaction line”).  
+• All table and column names were cleaned up to follow a consistent naming convention.  
+• SCD Type 2 logic was fully implemented in DimCustomer using surrogate keys, date ranges, and current flags.
+
+Step 3: Validation & Confidence Building  
+The updated model was shared back for final review.  
+• The changes were solid — the model is now much more clear, consistent, and scalable.  
+• It now follows best practices in dimensional design and historical data tracking.  
+
+Result:  
+• Demonstrated a well-structured model she feels confident moving forward with.  
+• The design is ready for the next phase — development and testing.  
+• This round of feedback helped clarify some of the grey areas and gave everyone more confidence in their modeling approach.
